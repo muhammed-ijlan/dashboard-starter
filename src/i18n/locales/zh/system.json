@@ -1,0 +1,176 @@
+{
+  "header": {
+    "title": "系统与运维中心",
+    "description": "查看TokenB的基础系统运行情况，帮助发现链路异常和服务问题"
+  },
+  "stats": {
+    "chainStatus": {
+      "title": "链状态",
+      "subtitle": "已同步链数量"
+    },
+    "serviceStatus": {
+      "title": "服务状态",
+      "subtitle": "运行中的服务"
+    },
+    "unresolvedAlerts": {
+      "title": "未解决告警"
+    },
+    "systemLoad": {
+      "title": "系统负载",
+      "subtitle": "CPU {{cpu}}% / 内存 {{memory}}%"
+    }
+  },
+  "tabs": {
+    "chain": "链状态",
+    "service": "服务状态",
+    "alerts": "告警问题",
+    "logs": "系统日志"
+  },
+  "chainStatusTab": {
+    "monitoring": "监控 {{count}} 条区块链",
+    "refresh": "刷新状态",
+    "status": {
+      "Synced": "已同步",
+      "Syncing": "同步中",
+      "Abnormal": "异常",
+      "healthy": "健康",
+      "syncing": "同步中",
+      "abnormal": "异常"
+    },
+    "fields": {
+      "blockHeight": "区块高度",
+      "latestBlock": "最新区块",
+      "nodeConnection": "连接节点",
+      "networkHashrate": "网络算力",
+      "syncProgress": "同步进度"
+    }
+  },
+  "serviceStatusTab": {
+    "monitoring": "正在监控 {{count}} 个服务",
+    "refresh": "刷新",
+    "status": {
+      "running": "运行中",
+      "degraded": "性能下降",
+      "stopped": "已停止",
+      "warning": "警告"
+    },
+    "fields": {
+      "lastCheck": "最后检查",
+      "uptime": "运行时间",
+      "responseTime": "响应时间",
+      "requestVolume": "请求量"
+    },
+    "services": {
+      "api": "API 服务",
+      "wallet": "钱包服务",
+      "transaction": "交易处理服务",
+      "notification": "通知服务",
+      "backup": "备份服务",
+      "monitoring": "监控服务"
+    }
+  },
+  "unresolvedAlertsTab": {
+    "summary": "共 {{total}} 条告警，{{unresolved}} 条未解决",
+    "actions": {
+      "refresh": "刷新",
+      "process": "处理"
+    },
+    "severity": {
+      "critical": "严重",
+      "error": "错误",
+      "warning": "警告",
+      "info": "信息",
+      "success": "成功"
+    },
+    "status": {
+      "resolved": "已解决",
+      "unresolved": "未解决"
+    },
+    "alerts": {
+      "1": {
+        "service": "区块链服务",
+        "title": "Polygon链同步异常",
+        "detail": "Polygon链节点连接中断，区块同步停滞"
+      },
+      "2": {
+        "service": "通知服务",
+        "title": "通知服务响应延迟",
+        "detail": "通知服务响应时间超过阈值 (>500ms)"
+      },
+      "3": {
+        "service": "区块链服务",
+        "title": "BSC链同步进度缓慢",
+        "detail": "BSC链同步速度低于预期，当前进度98.5%"
+      },
+      "4": {
+        "service": "备份服务",
+        "title": "定时备份已完成",
+        "detail": "定时数据库备份任务已成功完成"
+      },
+      "5": {
+        "service": "数据库",
+        "title": "数据库连接池耗尽",
+        "detail": "数据库连接池使用率达到 95%"
+      }
+    }
+  },
+  "systemLogsTab": {
+    "title": "系统运行日志",
+    "actions": {
+      "refresh": "刷新",
+      "export": "导出日志"
+    },
+    "level": {
+      "ERROR": "错误",
+      "WARNING": "警告",
+      "INFO": "信息",
+      "SUCCESS": "成功",
+      "error": "错误",
+      "warning": "警告",
+      "info": "信息",
+      "success": "成功"
+    },
+    "logs": {
+      "1": {
+        "service": "区块链服务",
+        "title": "Polygon 节点连接失败：连接超时",
+        "detail": "无法连接到节点 polygon-node-3：30秒后超时"
+      },
+      "2": {
+        "service": "通知服务",
+        "title": "通知队列积压：当前队列长度 1250",
+        "detail": "通知发送速率低于入队速率。建议检查通知服务性能。"
+      },
+      "3": {
+        "service": "区块链服务",
+        "title": "BTC 区块 #820450 已同步",
+        "detail": "成功同步并验证区块，包含 2,341 笔交易"
+      },
+      "4": {
+        "service": "区块链服务",
+        "title": "ETH 区块 #18654321 已同步",
+        "detail": "成功同步并验证区块，包含 145 笔交易"
+      },
+      "5": {
+        "service": "数据库",
+        "title": "数据库连接池使用率过高：85%",
+        "detail": "活跃连接数：170/200。建议监控使用情况"
+      },
+      "6": {
+        "service": "备份服务",
+        "title": "定时数据库备份已完成",
+        "detail": "备份文件大小：125GB，耗时：15 分钟"
+      },
+      "7": {
+        "service": "监控系统",
+        "title": "系统健康检查通过",
+        "detail": "所有关键服务均运行正常"
+      },
+      "8": {
+        "service": "交易服务",
+        "title": "交易广播失败：手续费不足",
+        "detail": "由于手续费不足，交易 tx_abc123 广播失败"
+      }
+    }
+  }
+}

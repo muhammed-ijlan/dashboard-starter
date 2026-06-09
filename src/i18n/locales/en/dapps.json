@@ -1,0 +1,142 @@
+{
+  "header": {
+    "title": "DApp Management",
+    "description": "Manage the decentralized applications supported by TokenB"
+  },
+  "statCard": {
+    "title": {
+      "totalDapps": "Total DApps",
+      "visible": "Showing",
+      "totalClicks": "Total Clicks",
+      "totalFavs": "Total Favorites",
+      "totalUsers": "Total Users"
+    }
+  },
+  "actions": {
+    "addDapp": "Add DApp",
+    "categoryManagement": "Category Management"
+  },
+  "category": {
+    "title": "Category Management",
+    "createTitle": "Create Category",
+    "editTitle": "Edit Category",
+    "infoTitle": "Category Info",
+    "listTitle": "Category List",
+    "clear": "Clear",
+    "return": "Cancel",
+    "fields": {
+      "name": {
+        "label": "Category Name",
+        "placeholder": "Enter category name"
+      },
+      "nameEn": {
+        "label": "Category Name (EN)",
+        "placeholder": "English name"
+      },
+      "nameZhCn": {
+        "label": "Category Name (ZH-CN)",
+        "placeholder": "Chinese name"
+      },
+      "nameZhHk": {
+        "label": "Category Name (ZH-HK)",
+        "placeholder": "Traditional Chinese name"
+      },
+      "sort": {
+        "label": "Sort"
+      },
+      "enable": {
+        "label": "Enable this category"
+      }
+    },
+    "status": {
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    },
+    "row": {
+      "summary": "Sort: {{sort}} | DApp Count: {{count}}",
+      "show": "Show category",
+      "hide": "Hide category"
+    },
+    "empty": {
+      "title": "No categories yet",
+      "description": "Categories you create will appear here."
+    },
+    "error": {
+      "title": "Could not load categories",
+      "description": "Something went wrong. Please try again.",
+      "retry": "Retry"
+    },
+    "messages": {
+      "createSuccess": "Category created successfully",
+      "updateSuccess": "Category updated successfully",
+      "deleteSuccess": "Category deleted successfully",
+      "confirmDelete": "Are you sure you want to delete",
+      "sortInUse": "Sort number is already in use by another category"
+    }
+  },
+  "notfound": "",
+  "placeholder": "Search by DApp name or description...",
+  "table": {
+    "columns": {
+      "dapp": "DApp",
+      "description": "Description",
+      "url": "URL",
+      "type": "Type",
+      "clicks": "Clicks",
+      "favorites": "Favorites",
+      "status": "Status",
+      "actions": "Actions"
+    }
+  },
+  "status": {
+    "all": "All",
+    "visible": "Visible",
+    "hidden": "Hidden"
+  },
+  "filters": {
+    "allCategories": "All Categories",
+    "allStatuses": "All Statuses"
+  },
+  "messages": {
+    "confirmDelete": "Are you sure you want to delete",
+    "updateSuccess": "dApp updated successfully",
+    "createSuccess": "dApp created successfully",
+    "deleteSuccess": "dApp deleted successfully"
+  },
+  "drawer": {
+    "title": {
+      "add": "Add DApp",
+      "edit": "Edit DApp"
+    },
+    "fields": {
+      "name": {
+        "label": "DApp Name",
+        "placeholder": "Enter DApp name",
+        "required": "Please enter a DApp name"
+      },
+      "logo": {
+        "label": "Enter Logo URL",
+        "placeholder": "Enter Logo URL",
+        "invalid": "Please enter a valid logo URL"
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Enter DApp description"
+      },
+      "url": {
+        "label": "URL",
+        "placeholder": "https://example.com",
+        "required": "Please enter a URL",
+        "invalid": "Please enter a valid URL"
+      },
+      "category": {
+        "label": "Category",
+        "placeholder": "Select a category",
+        "required": "Please select a category"
+      },
+      "hidden": {
+        "label": "Hide this DApp"
+      }
+    }
+  }
+}

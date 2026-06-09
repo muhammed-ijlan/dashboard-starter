@@ -1,0 +1,134 @@
+{
+  "appTitle": "后台管理平台",
+  "header": {
+    "language": "中文"
+  },
+  "sidebar": {
+    "dashboard": "仪表盘",
+    "users": "用户中心",
+    "wallets": "钱包 / 地址",
+    "transactions": "交易中心",
+    "dapps": "应用管理",
+    "tronGas": "系统设置",
+    "admins": "管理员",
+    "system": "系统与运维",
+    "accountSettings": "账户设置",
+    "logout": "退出登录",
+    "account": "账户信息"
+  },
+  "actions": {
+    "submit": "提交",
+    "cancel": "取消",
+    "filter": "筛选",
+    "export": "导出",
+    "previous": "上一页",
+    "next": "下一页",
+    "confirm": "确定",
+    "save": "保存",
+    "add": "添加",
+    "edit": "编辑",
+    "delete": "删除"
+  },
+  "pagination": "显示第 {{range0}}-{{range1}} 条结果，共 {{total}} 条",
+  "paginationPageSize": "{{size}} 条/页",
+  "paginationGoTo": "跳至",
+  "empty": {
+    "noData": "暂无数据",
+    "noResults": "未找到结果"
+  },
+  "status": {
+    "completed": "已完成",
+    "processing": "处理中",
+    "failed": "失败"
+  },
+  "password": {
+    "rules": {
+      "length": "至少8个字符",
+      "uppercase": "大写字母",
+      "lowercase": "小写字母",
+      "number": "数字",
+      "special": "特殊字符"
+    },
+    "errors": {
+      "length": "密码长度至少为8个字符",
+      "uppercase": "密码必须包含大写字母",
+      "lowercase": "密码必须包含小写字母",
+      "number": "密码必须包含数字",
+      "special": "密码必须包含特殊字符"
+    },
+    "strength": {
+      "weak": "弱",
+      "fair": "一般",
+      "good": "良好",
+      "strong": "强",
+      "veryStrong": "非常强"
+    }
+  },
+  "errors": {
+    "generic": "出现错误，请重试。",
+    "network": "无法连接到服务器，请检查您的网络。",
+    "unexpected": "发生未知错误，请重试。"
+  },
+  "loading": "加载中...",
+  "exportLoading": "导出中...",
+  "exportSuccess": "导出完成",
+  "exportFailed": "导出失败，请重试。",
+  "exportConfirm": {
+    "title": "导出数据",
+    "description": "将导出 {{count}} 条记录为 Excel (.xlsx) 文件。",
+    "descriptionUnknown": "将当前列表导出为 Excel (.xlsx) 文件。",
+    "download": "下载"
+  },
+  "exportHeaders": {
+    "Name": "名称",
+    "Account": "账号",
+    "Email": "邮箱",
+    "Role": "角色",
+    "State": "状态",
+    "Google 2FA": "谷歌双重认证",
+    "Created At": "创建时间",
+    "Last Login": "最后登录",
+    "Created By": "创建人",
+    "Type": "类型",
+    "URL": "链接",
+    "Description": "描述",
+    "Clicks": "点击量",
+    "Favorites": "收藏量",
+    "Status": "状态",
+    "Hash": "哈希",
+    "Wallet": "钱包",
+    "Amount": "金额",
+    "Amount USD": "金额 (美元)",
+    "Fee": "手续费",
+    "Confirmations": "确认数",
+    "Time": "时间",
+    "Device ID": "设备 ID",
+    "Platform": "平台",
+    "Wallets": "钱包数",
+    "Install Time": "安装时间",
+    "Last Active": "最后活跃",
+    "ID": "编号",
+    "Severity": "严重程度",
+    "Message": "消息",
+    "Resolved": "已解决",
+    "Level": "级别",
+    "Source": "来源",
+    "Currency": "币种",
+    "Address": "地址",
+    "User": "用户",
+    "Balance": "余额",
+    "Balance (USD)": "余额 (美元)",
+    "24h Change (%)": "24小时涨跌 (%)",
+    "Transactions": "交易数",
+    "Last Activity": "最后活动"
+  },
+  "error": {
+    "title": "出了点问题",
+    "description": "加载此部分时遇到意外问题。请尝试刷新页面或返回首页。",
+    "tryAgain": "重试",
+    "goHome": "返回首页",
+    "technicalDetails": "技术详情",
+    "errorLabel": "错误：{{message}}",
+    "noStack": "无堆栈信息"
+  }
+}

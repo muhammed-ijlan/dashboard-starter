@@ -1,0 +1,39 @@
+{
+  "header": {
+    "title": "Wallet Center",
+    "description": "Manage all user wallets and addresses"
+  },
+  "action": {
+    "createWallet": "Create Wallet"
+  },
+  "placeholder": "Search wallet address, user or ID...",
+  "statCard": {
+    "totalWallets": "Total Wallets",
+    "totalValue": "Total Value",
+    "activeWallets": "Active Wallets",
+    "frozenWallets": "Frozen Wallets"
+  },
+  "notfound": "No wallets found",
+  "address": "Address",
+  "user": "User",
+  "transactions": "Transactions",
+  "lastActivity": "Last Activity",
+  "status": {
+    "normal": "Normal",
+    "active": "Active",
+    "frozen": "Frozen",
+    "pending": "Pending",
+    "monitoring": "Monitoring"
+  },
+  "detail": {
+    "title": "Wallet Details",
+    "subtitle": "On-chain wallet information",
+    "loading": "Loading wallet details...",
+    "error": "Failed to load wallet details",
+    "balance": "Balance",
+    "chains": "Chains",
+    "chainDetails": "Chain Details",
+    "change24h": "24h Change",
+    "created": "Created"
+  }
+}

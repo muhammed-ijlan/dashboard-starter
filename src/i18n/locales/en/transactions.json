@@ -1,0 +1,56 @@
+{
+  "header": {
+    "title": "Transaction Center",
+    "description": "View and manage all transaction records"
+  },
+  "statCard": {
+    "title": {
+      "todaysTrx": "Today’s Transactions",
+      "trxVolume": "Today’s Transaction Volume",
+      "pending": "Pending",
+      "successRate": "Success Rate"
+    },
+    "subTitle": {
+      "todaysTrx": "Today’s Transactions",
+      "trxVolume": "Today’s Transaction Volume"
+    }
+  },
+  "trxVolume24": "24-Hour Transaction Volume",
+  "trxVolume7d": "7-Day Transaction Volume",
+  "chartTooltip": {
+    "volume": "Volume"
+  },
+  "periodToggle": {
+    "24h": "24H",
+    "7d": "7D"
+  },
+  "notfound": "Transactions not found",
+  "placeholder": "Search by transaction hash or wallet address...",
+  "card": {
+    "type": {
+      "receive": "Receive",
+      "send": "Send"
+    },
+    "hash": "Hash",
+    "wallet": "Wallet",
+    "time": "Time",
+    "fee": "Gas Fee",
+    "confirmations": "Confirmations"
+  },
+  "detail": {
+    "title": "Transaction Details",
+    "subtitle": "On-chain transaction information",
+    "loading": "Loading transaction details...",
+    "error": "Failed to load transaction details",
+    "txHash": "Transaction Hash",
+    "wallet": "Wallet Address",
+    "amount": "Amount",
+    "amountUsd": "Amount (USD)",
+    "fee": "Gas Fee",
+    "confirmations": "Confirmations",
+    "type": "Type",
+    "status": "Status",
+    "time": "Time",
+    "user": "User"
+  }
+}

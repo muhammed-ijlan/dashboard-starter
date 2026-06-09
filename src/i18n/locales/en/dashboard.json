@@ -1,0 +1,45 @@
+{
+  "header": {
+    "title": "Dashboard",
+    "description": "Crypto wallet management system overview"
+  },
+  "statCard": {
+    "title": {
+      "totalUsers": "Total Users",
+      "activeWallets": "Active Wallets",
+      "activeUsers": "Active Users",
+      "todaysTrx": "Today's Transactions",
+      "volume": "Trading Volume (USD)"
+    },
+    "trend": {
+      "up": "+{{val}}% {{timeframe}}",
+      "down": "-{{val}}% {{timeframe}}",
+      "vs_month": "vs last month",
+      "vs_yesterday": "vs yesterday"
+    }
+  },
+  "transactionTrend": "Transaction Trend",
+  "assetDistribution": "Asset Distribution",
+  "sevenDayStats": "7-Day Volume Statistics",
+  "chartTooltip": {
+    "transactions": "Transactions",
+    "volume": "Volume",
+    "others": "Others"
+  },
+  "recentActivities": "Recent Activity",
+  "sysAlerts": "System Alerts",
+  "activity": {
+    "type": {
+      "receive": "Deposit",
+      "send": "Withdraw"
+    }
+  },
+  "alert": {
+    "resolved": "Resolved",
+    "unresolved": "Unresolved"
+  },
+  "action": {
+    "viewAll": "View All"
+  },
+  "noAlerts": "No system alerts at the moment."
+}

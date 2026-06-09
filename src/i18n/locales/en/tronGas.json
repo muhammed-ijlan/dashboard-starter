@@ -1,0 +1,73 @@
+{
+  "header": {
+    "title": "Tron Gas Fee Management",
+    "description": "Configure Tron chain gas fee strategy and user free quota"
+  },
+  "actions": {
+    "save": "Save",
+    "saveSuccess": "Configuration saved",
+    "saveFailed": "Failed to save configuration"
+  },
+  "stats": {
+    "energyStatus": "Energy Status",
+    "energyStatusEnabled": "Enabled",
+    "energyStatusDisabled": "Disabled",
+    "energyStatusCaption": "Netts Energy Optimization",
+    "userFee": "User Fee",
+    "userFeeCaption": "Per transaction",
+    "freeQuota": "Free Quota",
+    "freeQuotaCaption": "Free transactions per month",
+    "totalProfit": "Total Profit",
+    "totalProfitCaption": "Since Netts integration"
+  },
+  "gasConfig": {
+    "title": "Gas Fee Configuration",
+    "description": "Set gas fee charging strategy for Tron transactions",
+    "toggleTitle": "Enable Netts Energy Optimization",
+    "toggleDescription": "Reduce user gas cost by purchasing Energy through Netts",
+    "userFeeAmount": "User Fee Multiplier",
+    "userFeeAmountHelp": "The amount each user needs to pay for each transfer = Platform reference cost × User Fee Multiplier",
+    "platformCost": "Platform Cost",
+    "platformCostHelp": "Cost of purchasing Energy through Netts (TRX)",
+    "profitAnalysis": "Profit Analysis",
+    "profitPerTx": "Profit per tx",
+    "profitMargin": "Profit margin",
+    "totalProfit": "Total Profit",
+    "active": "Configuration is currently active",
+    "inactive": "Configuration is currently inactive"
+  },
+  "freeQuota": {
+    "title": "Free Quota Configuration",
+    "description": "Set monthly free gas transactions for users",
+    "monthlyCount": "Monthly Free Count",
+    "monthlyCountHelp": "Default 3, range 0 to 10",
+    "scope": "Applicable Scope",
+    "scopeAll": "All users",
+    "scopeNewAfter": "New users created after a specific date",
+    "pickDate": "Pick a date",
+    "selectDate": "Select date",
+    "resetRule": "Reset rule: Resets on the 1st of each month at UTC+0"
+  },
+  "nettsAccount": {
+    "title": "Netts Account Info",
+    "description": "View Netts balance and recharge address",
+    "selectRange": "Select date range",
+    "manualUpdate": "Manual update",
+    "syncSuccess": "Netts account updated",
+    "exportConsumption": "Export Netts Consumption",
+    "currentBalance": "Current TRX Balance",
+    "currentBalanceCaption": "Current available balance",
+    "totalConsumed": "Total Consumed",
+    "totalConsumedCaption": "Since Netts integration",
+    "rechargeAddress": "Recharge Address",
+    "lastUpdate": "Last update: {{time}}",
+    "topUpWarning": "Warning: Please top up TRX in time to ensure Netts Energy service runs normally"
+  },
+  "validation": {
+    "userFeeRange": "Must be greater than 0",
+    "costRange": "Must be greater than 0",
+    "freeCountRange": "Must be between 0 and 10",
+    "dateRequired": "Pick a date to apply the new-users scope"
+  },
+  "noPermission": "You don't have permission to manage this configuration"
+}

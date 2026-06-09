@@ -1,0 +1,134 @@
+{
+  "appTitle": "Backend Management Platform",
+  "header": {
+    "language": "EN"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "wallets": "Wallets",
+    "transactions": "Transactions",
+    "dapps": "Apps",
+    "tronGas": "Settings",
+    "admins": "Admins",
+    "system": "System",
+    "accountSettings": "Account Settings",
+    "logout": "Logout",
+    "account": "Account"
+  },
+  "actions": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "filter": "Filter",
+    "export": "Export",
+    "previous": "Previous",
+    "next": "Next",
+    "confirm": "Confirm",
+    "save": "Save",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "pagination": "Showing {{range0}}-{{range1}} of {{total}} results",
+  "paginationPageSize": "{{size}} / page",
+  "paginationGoTo": "Go to",
+  "empty": {
+    "noData": "No data available",
+    "noResults": "No results found"
+  },
+  "status": {
+    "completed": "Completed",
+    "processing": "Processing",
+    "failed": "Failed"
+  },
+  "password": {
+    "rules": {
+      "length": "At least 8 characters",
+      "uppercase": "Uppercase letter",
+      "lowercase": "Lowercase letter",
+      "number": "Number",
+      "special": "Special character"
+    },
+    "errors": {
+      "length": "Password must be at least 8 characters",
+      "uppercase": "Password must contain an uppercase letter",
+      "lowercase": "Password must contain a lowercase letter",
+      "number": "Password must contain a number",
+      "special": "Password must contain a special character"
+    },
+    "strength": {
+      "weak": "Weak",
+      "fair": "Fair",
+      "good": "Good",
+      "strong": "Strong",
+      "veryStrong": "Very Strong"
+    }
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Unable to connect to the server. Please check your network.",
+    "unexpected": "An unexpected error occurred. Please try again."
+  },
+  "loading": "Loading...",
+  "exportLoading": "Exporting...",
+  "exportSuccess": "Export complete",
+  "exportFailed": "Failed to export. Please try again.",
+  "exportConfirm": {
+    "title": "Export data",
+    "description": "Download {{count}} rows as an Excel (.xlsx) file.",
+    "descriptionUnknown": "Download the current list as an Excel (.xlsx) file.",
+    "download": "Download"
+  },
+  "exportHeaders": {
+    "Name": "Name",
+    "Account": "Account",
+    "Email": "Email",
+    "Role": "Role",
+    "State": "State",
+    "Google 2FA": "Google 2FA",
+    "Created At": "Created At",
+    "Last Login": "Last Login",
+    "Created By": "Created By",
+    "Type": "Type",
+    "URL": "URL",
+    "Description": "Description",
+    "Clicks": "Clicks",
+    "Favorites": "Favorites",
+    "Status": "Status",
+    "Hash": "Hash",
+    "Wallet": "Wallet",
+    "Amount": "Amount",
+    "Amount USD": "Amount USD",
+    "Fee": "Fee",
+    "Confirmations": "Confirmations",
+    "Time": "Time",
+    "Device ID": "Device ID",
+    "Platform": "Platform",
+    "Wallets": "Wallets",
+    "Install Time": "Install Time",
+    "Last Active": "Last Active",
+    "ID": "ID",
+    "Severity": "Severity",
+    "Message": "Message",
+    "Resolved": "Resolved",
+    "Level": "Level",
+    "Source": "Source",
+    "Currency": "Currency",
+    "Address": "Address",
+    "User": "User",
+    "Balance": "Balance",
+    "Balance (USD)": "Balance (USD)",
+    "24h Change (%)": "24h Change (%)",
+    "Transactions": "Transactions",
+    "Last Activity": "Last Activity"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "We encountered an unexpected issue while trying to load this section of the dashboard. Please try refreshing or return to the dashboard home.",
+    "tryAgain": "Try again",
+    "goHome": "Go Home",
+    "technicalDetails": "Technical Details",
+    "errorLabel": "Error: {{message}}",
+    "noStack": "No stack trace available"
+  }
+}

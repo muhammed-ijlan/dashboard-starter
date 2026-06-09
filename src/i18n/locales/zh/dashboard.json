@@ -1,0 +1,45 @@
+{
+  "header": {
+    "title": "仪表盘",
+    "description": "加密钱包管理系统总览"
+  },
+  "statCard": {
+    "title": {
+      "totalUsers": "总用户数",
+      "activeWallets": "活跃钱包",
+      "activeUsers": "活跃用户",
+      "todaysTrx": "今日交易",
+      "volume": "交易总额 (USD)"
+    },
+    "trend": {
+      "up": "+{{val}}% {{timeframe}}",
+      "down": "-{{val}}% {{timeframe}}",
+      "vs_month": "较上月",
+      "vs_yesterday": "较昨日"
+    }
+  },
+  "transactionTrend": "交易趋势",
+  "assetDistribution": "资产分布",
+  "sevenDayStats": "7日交易量统计",
+  "chartTooltip": {
+    "transactions": "交易数",
+    "volume": "交易量",
+    "others": "其他"
+  },
+  "recentActivities": "最近活动",
+  "sysAlerts": "系统告警",
+  "activity": {
+    "type": {
+      "receive": "转入",
+      "send": "转出"
+    }
+  },
+  "alert": {
+    "resolved": "已解决",
+    "unresolved": "未解决"
+  },
+  "action": {
+    "viewAll": "查看全部"
+  },
+  "noAlerts": "当前没有系统告警。"
+}

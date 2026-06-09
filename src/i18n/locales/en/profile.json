@@ -1,0 +1,110 @@
+{
+  "header": {
+    "title": "Admin Profile",
+    "description": "Manage your account settings, security preferences, and view your system access."
+  },
+  "accountActive": "Account Active",
+  "emailAddress": "Email Address",
+  "account": "Account",
+  "securitySettings": {
+    "title": "Password Settings",
+    "description": "Update your password and security preferences.",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "updatePassword": "Update Password",
+    "currentPasswordRequired": "Please enter your current password",
+    "newPasswordRequired": "Please enter a new password",
+    "newPasswordLength": "Password must be at least 8 characters long",
+    "confirmPasswordRequired": "Confirm password is required",
+    "passwordMismatch": "Passwords do not match",
+    "passwordUpdated": "Password successfully updated!",
+    "passwordFailed": "Failed to update password. Please try again."
+  },
+  "security": {
+    "title": "Security Settings",
+    "twoFactor": {
+      "title": "Two-Factor Authentication (2FA)",
+      "descriptionDisabled": "Your account is currently not protected with Two-Factor Authentication (2FA) via Google Authenticator",
+      "descriptionEnabled": "Your account is protected with Two-Factor Authentication (2FA) via Google Authenticator",
+      "notEnabled": "Not enabled",
+      "lastUpdated": "Last updated",
+      "enabled": "Enabled",
+      "enable": "Enable Google 2FA",
+      "disable": "Remove 2FA"
+    },
+    "unbind": {
+      "title": "Unbind Two-Factor Authentication",
+      "warning": {
+        "title": "Security Warning",
+        "line1": "Disabling 2FA will reduce your account security",
+        "line2": "You will be required to set up 2FA again on next login",
+        "line3": "This action will be logged for security audit"
+      },
+      "codeLabel": "Enter Current 2FA Code to Confirm",
+      "codeHelper": "Enter the 6-digit code from Google Authenticator to confirm",
+      "confirm": "Unbind 2FA",
+      "success": "Two-factor authentication has been disabled."
+    }
+  },
+  "setup2fa": {
+    "title": "Set Up Two-Factor Authentication",
+    "description": "Secure your admin account with Google Authenticator. This is required to access the CryptoPay Admin dashboard.",
+    "requirement": {
+      "title": "Security Requirement",
+      "description": "Two-factor authentication is mandatory for all admin accounts. You must complete this setup to continue."
+    },
+    "step1": {
+      "title": "Download Google Authenticator",
+      "description": "Install Google Authenticator on your mobile device from the App Store or Google Play Store."
+    },
+    "step2": {
+      "title": "Scan QR Code",
+      "description": "Open Google Authenticator and scan this QR code to add your CryptoPay Admin account."
+    },
+    "step3": {
+      "title": "Or Enter Setup Key Manually",
+      "description": "If you can't scan the QR code, enter this key manually in Google Authenticator:"
+    },
+    "step4": {
+      "title": "Enter Verification Code",
+      "description": "Enter the 6-digit code from Google Authenticator to verify your setup.",
+      "label": "6-Digit Verification Code"
+    },
+    "copy": "Copy",
+    "copied": "Copied",
+    "enable": "Enable Two-Factor Authentication",
+    "enabling": "Enabling...",
+    "skip": "Skip",
+    "cancel": "Cancel",
+    "consent": "By enabling 2FA, you agree to use Google Authenticator for all future logins.",
+    "help": "Need help? Contact your system administrator for assistance.",
+    "success": "Two-factor authentication enabled successfully."
+  },
+  "permissions": {
+    "title": "Permissions",
+    "description": "View your system access permissions and roles ",
+    "policy": "policy.",
+    "granted": "Granted",
+    "restricted": "Restricted",
+    "fullAccess": " Full Access",
+    "viewData": "View Data",
+    "editRecords": "Edit Records",
+    "deleteAccess": "Delete Access",
+    "modules": {
+      "dashboard": "Dashboard",
+      "userCenter": "Users",
+      "wallet": "Wallets",
+      "transaction": "Transactions",
+      "dapp": "DApps",
+      "admin": "Admins",
+      "system": "System"
+    },
+    "roles": {
+      "Super Admin": "Super Admin",
+      "Admin": "Admin",
+      "Operations": "Operations",
+      "It Ops": "IT Ops"
+    }
+  }
+}

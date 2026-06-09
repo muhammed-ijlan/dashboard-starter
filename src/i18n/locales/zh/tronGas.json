@@ -1,0 +1,73 @@
+{
+  "header": {
+    "title": "Tron Gas 费用管理",
+    "description": "配置 Tron 链 Gas 费用策略和用户免费额度"
+  },
+  "actions": {
+    "save": "保存",
+    "saveSuccess": "配置已保存",
+    "saveFailed": "保存配置失败"
+  },
+  "stats": {
+    "energyStatus": "Energy 状态",
+    "energyStatusEnabled": "已启用",
+    "energyStatusDisabled": "已停用",
+    "energyStatusCaption": "Netts Energy 优化",
+    "userFee": "用户收费",
+    "userFeeCaption": "每笔转账",
+    "freeQuota": "免费额度",
+    "freeQuotaCaption": "每月免费次数",
+    "totalProfit": "累计总利润",
+    "totalProfitCaption": "自接入 Netts 后"
+  },
+  "gasConfig": {
+    "title": "Gas 费用配置",
+    "description": "设置 Tron 链转账的 Gas 费用收费策略",
+    "toggleTitle": "启用 Netts Energy 优化",
+    "toggleDescription": "通过 Netts 购买 Energy 降低用户 Gas 成本",
+    "userFeeAmount": "用户收费倍率",
+    "userFeeAmountHelp": "用户每笔转账需支付的金额 = 平台参考成本 × 用户收费倍率",
+    "platformCost": "平台成本",
+    "platformCostHelp": "通过 Netts 购买 Energy 的成本（TRX）",
+    "profitAnalysis": "利润分析",
+    "profitPerTx": "每笔利润",
+    "profitMargin": "利润率",
+    "totalProfit": "累计总利润",
+    "active": "当前配置已生效",
+    "inactive": "配置当前已停用"
+  },
+  "freeQuota": {
+    "title": "免费次数配置",
+    "description": "设置用户每月可享受的免费 Gas 次数",
+    "monthlyCount": "每月免费次数",
+    "monthlyCountHelp": "默认 3 笔，可设置 0-10 笔",
+    "scope": "适用范围",
+    "scopeAll": "全量用户",
+    "scopeNewAfter": "创建时间在指定日期之后的新用户",
+    "pickDate": "选择一个日期",
+    "selectDate": "选择日期",
+    "resetRule": "重置规则：按 UTC+0 自然月重置，每月 1 号自动重置免费次数"
+  },
+  "nettsAccount": {
+    "title": "Netts 账户信息",
+    "description": "查看 Netts 余额和充值地址",
+    "selectRange": "选择日期区间",
+    "manualUpdate": "手动更新",
+    "syncSuccess": "Netts 账户已更新",
+    "exportConsumption": "导出 Netts 消耗",
+    "currentBalance": "当前 TRX 余额",
+    "currentBalanceCaption": "当前可用余额",
+    "totalConsumed": "累计已消耗金额",
+    "totalConsumedCaption": "自接入 Netts 后",
+    "rechargeAddress": "充值地址",
+    "lastUpdate": "最后更新：{{time}}",
+    "topUpWarning": "注意：请及时充值 TRX 以确保 Netts Energy 服务正常运行"
+  },
+  "validation": {
+    "userFeeRange": "必须大于 0",
+    "costRange": "必须大于 0",
+    "freeCountRange": "必须在 0 - 10 之间",
+    "dateRequired": "请选择日期以启用新用户范围"
+  },
+  "noPermission": "您没有管理此配置的权限"
+}

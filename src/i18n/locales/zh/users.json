@@ -1,0 +1,33 @@
+{
+  "header": {
+    "title": "用户中心",
+    "description": "查看TokenB的安装用户和终端分布情况，了解用户规模、平台分布和基础使用情况"
+  },
+  "statCard": {
+    "title": {
+      "totalUsers": "总用户数",
+      "newToday": "今日新增用户",
+      "activeToday": "活跃用户数",
+      "totalInstalls": "总安装量"
+    },
+    "subtitle": {
+      "totalUsers": "累计安装设备数",
+      "newToday": "{{count}} 较昨日",
+      "activeToday": "近{{days}}天活跃设备"
+    }
+  },
+  "platformDistribution": "平台分布",
+  "searchPlaceholder": "搜索设备ID...",
+  "table": {
+    "columns": {
+      "deviceId": "设备 ID",
+      "installTime": "安装时间",
+      "platform": "设备平台",
+      "version": "App 版本",
+      "wallets": "钱包数量",
+      "lastActive": "最后活跃"
+    },
+    "walletCount_one": "个钱包",
+    "walletCount_other": "个钱包"
+  }
+}

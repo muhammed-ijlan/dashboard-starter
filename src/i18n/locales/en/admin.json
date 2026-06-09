@@ -1,0 +1,184 @@
+{
+  "header": {
+    "title": "Admin Management",
+    "description": "Manage admin accounts and role permissions in the backend"
+  },
+  "tab": {
+    "admin": "Admin",
+    "role": "Role"
+  },
+  "stat": {
+    "totalAdmins": "Total Admins",
+    "activeAccounts": "Active Accounts",
+    "disabledAccounts": "Disabled Accounts"
+  },
+  "placeholder": "Search by admin name, account, or email...",
+  "table": {
+    "columns": {
+      "admin": "Admin",
+      "account": "Account",
+      "role": "Role",
+      "state": "State",
+      "google2FA": "Google 2FA",
+      "createdAt": "Created At",
+      "lastLogin": "Last Login",
+      "createdBy": "Created By",
+      "actions": "Actions"
+    }
+  },
+  "filters": {
+    "allRoles": "All Roles",
+    "allStates": "All States",
+    "normal": "Normal",
+    "disabled": "Disabled"
+  },
+  "state": {
+    "Normal": "Normal",
+    "Disabled": "Disabled"
+  },
+  "google2FA": {
+    "Bound": "Bound",
+    "Unbound": "Unbound"
+  },
+  "createdByValues": {
+    "System": "System",
+    "Admin": "Admin"
+  },
+  "actions": {
+    "copyAccount": "Copy account",
+    "edit": "Edit",
+    "deleteTitle": "Delete Admin",
+    "deleteRole": "Delete Role",
+    "resetTitle": "Reset Password",
+    "resetConfirm": "Reset password for \"{{name}}\"?",
+    "enable": "Enable",
+    "disable": "Disable",
+    "createRole": "Create Role",
+    "addAdmin": "Add Admin"
+  },
+  "messages": {
+    "confirmDelete": "",
+    "adminCreated": "Admin created successfully",
+    "adminUpdated": "Admin updated successfully",
+    "adminDeleted": "Admin deleted successfully",
+    "adminEnabled": "Admin enabled successfully",
+    "adminDisabled": "Admin disabled successfully",
+    "roleCreated": "Role created successfully",
+    "roleUpdated": "Role updated successfully",
+    "roleDeleted": "Role deleted successfully"
+  },
+  "modal": {
+    "title": {
+      "add": "Add Admin",
+      "edit": "Edit Admin"
+    },
+    "fields": {
+      "account": {
+        "label": "Account",
+        "placeholder": "Enter Account",
+        "required": "Please enter account"
+      },
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter Name",
+        "required": "Please enter name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter Email",
+        "required": "Please enter email",
+        "invalid": "Please enter a valid email"
+      },
+      "role": {
+        "label": "Role",
+        "required": "Please select a role"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter Password",
+        "required": "Please enter password"
+      },
+      "confirm": {
+        "label": "Confirm",
+        "placeholder": "Please enter your password again",
+        "required": "Please confirm password",
+        "mismatch": "Passwords do not match"
+      }
+    },
+    "actions": {
+      "confirmAdd": "Confirm Add"
+    }
+  },
+  "roleDrawer": {
+    "title": {
+      "create": "Create Role",
+      "edit": "Edit Role"
+    },
+    "fields": {
+      "name": {
+        "label": "Role Name",
+        "placeholder": "Please enter the role name.",
+        "required": "Please enter the role name."
+      },
+      "description": {
+        "label": "Role Description",
+        "placeholder": "Please enter the role description.",
+        "required": "Please enter the role description."
+      }
+    },
+    "permissionSettings": "Permission Settings",
+    "modules": {
+      "dashboard": "Dashboard",
+      "userCenter": "User Center",
+      "users": "Users",
+      "wallet": "Wallet / Address",
+      "wallets": "Wallets",
+      "transaction": "Transactions",
+      "transactions": "Transactions",
+      "dapp": "DApp Management",
+      "dapps": "DApps",
+      "admin": "Admin",
+      "admins": "Admins",
+      "system": "System Operations",
+      "permissions": "Permissions",
+      "roles": "Roles",
+      "alerts": "Alerts"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "update": "Update",
+      "delete": "Delete",
+      "create": "Create",
+      "manage": "Manage",
+      "list": "List"
+    }
+  },
+  "roleCard": {
+    "members_one": "{{count}} member",
+    "members_other": "{{count}} members",
+    "permissionScope": "Permission Scope"
+  },
+  "roles": {
+    "Super Admin": "Super Admin",
+    "Admin": "Admin",
+    "Operations": "Operations",
+    "It Ops": "IT Ops",
+    "description_1": "Full access",
+    "description_2": "Operations role",
+    "description_3": "Technical support role",
+    "description_8": "Standard administrator"
+  },
+  "scopes": {
+    "Dashboard": "Dashboard",
+    "Users": "Users",
+    "Wallets": "Wallets",
+    "Transactions": "Transactions",
+    "DApps": "DApps",
+    "Admins": "Admins",
+    "Roles": "Roles",
+    "Permissions": "Permissions",
+    "System": "System",
+    "Alerts": "Alerts"
+  }
+}
