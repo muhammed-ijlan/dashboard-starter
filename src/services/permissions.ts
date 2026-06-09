@@ -1,8 +1,7 @@
-import { authApi, adminApi } from "@/api";
-import type { ApiPermission } from "@/api/admin";
+import { authApi } from "@/api";
 import { useAuthStore } from "@/store";
 import type { ModulePermission } from "@/types";
-import { toPageModule } from "@/constants/permissions";
+import { PAGE_MODULES, toPageModule } from "@/constants/permissions";
 
 export interface AuthPermissions {
   permissions: ModulePermission[];
@@ -14,7 +13,16 @@ export const EMPTY_AUTH_PERMISSIONS: AuthPermissions = {
   keys: [],
 };
 
-export function mapApiPermissions(apiPerms: ApiPermission[]): ModulePermission[] {
+export interface ApiPermissionShape {
+  key: string;
+  name: string;
+  module: string;
+  description: string;
+  displayOrder: number;
+  isDefault: boolean;
+}
+
+export function mapApiPermissions(apiPerms: ApiPermissionShape[]): ModulePermission[] {
   const map = new Map<string, ModulePermission>();
 
   for (const p of apiPerms) {
@@ -36,25 +44,28 @@ export function mapApiPermissions(apiPerms: ApiPermission[]): ModulePermission[]
   return [...map.values()];
 }
 
+/** Returns full permissions for all configured modules. Replace with your own API call. */
+function fullPermissions(): AuthPermissions {
+  const permissions: ModulePermission[] = PAGE_MODULES.map((m) => ({
+    module: m.key,
+    view: true,
+    edit: true,
+    delete: true,
+  }));
+  const keys = permissions.map((p) => `${p.module}.view`);
+  return { permissions, keys };
+}
+
 export async function fetchAuthPermissions(): Promise<AuthPermissions> {
   const user = useAuthStore.getState().user;
   if (!user) return EMPTY_AUTH_PERMISSIONS;
 
-  let currentRole = user.role;
   try {
-    const me = await authApi.me();
-    if (me?.role) currentRole = me.role;
+    await authApi.me();
   } catch {
-    // fall back to cached role on the store
+    // proceed with cached user
   }
 
-  const rolesRes = await adminApi.getRoles();
-  const role = rolesRes.list.find((r) => r.displayName === currentRole || r.name === currentRole);
-  if (!role) return EMPTY_AUTH_PERMISSIONS;
-
-  const apiPerms = await adminApi.getRolePermissions(role.id);
-  return {
-    permissions: mapApiPermissions(apiPerms),
-    keys: apiPerms.map((p) => p.key),
-  };
+  // TODO: replace with your own permission fetching logic
+  return fullPermissions();
 }

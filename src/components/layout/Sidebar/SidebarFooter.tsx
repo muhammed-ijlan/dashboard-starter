@@ -6,7 +6,6 @@ import { LogOut, MoreVertical, Settings } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Namespace } from "@/i18n/namespaces";
 import { routes } from "@/routes/paths";
-import { GRADIENTS } from "@/constants/gradients";
 
 export const SidebarFooter = ({ onClose }: { onClose: () => void }) => {
   const user = useAuthStore((s) => s.user);
@@ -101,7 +100,7 @@ export const SidebarFooter = ({ onClose }: { onClose: () => void }) => {
         <div className="flex items-center gap-3 overflow-hidden flex-1 min-w-0">
           <div
             className="w-10 h-10 rounded-full text-white flex items-center justify-center font-semibold text-[16px] shrink-0"
-            style={{ background: GRADIENTS.sidebarUserAvatar }}
+            style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }}
           >
             {user?.account?.charAt(0).toUpperCase() || "U"}
           </div>

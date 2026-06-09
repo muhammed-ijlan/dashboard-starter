@@ -16,8 +16,12 @@ import { Namespace } from "@/i18n/namespaces";
 import { AppCardLayout } from "@/components/shared";
 import { useDashboard } from "@/hooks/useDashboard";
 import { formatCompact, formatUSD } from "@/utils";
-import type { TransactionVolume7d } from "@/api/dashboard";
 import { ChartSkeleton } from "./ChartSkeleton";
+
+interface TransactionVolume7d {
+  date: string;
+  volume: number;
+}
 
 export const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
@@ -113,7 +117,7 @@ export const VolumeStatisticsChart = () => {
           <Bar
             dataKey="volume"
             name={t("chartTooltip.volume")}
-            fill={COLORS.chart.btc}
+            fill={COLORS.primary}
             barSize={28}
           />
         </BarChart>

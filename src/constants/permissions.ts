@@ -1,28 +1,9 @@
-export const PAGE_MODULES = [
-  { key: "dashboard", label: "Dashboard" },
-  { key: "userCenter", label: "Users" },
-  { key: "wallet", label: "Wallets" },
-  { key: "transaction", label: "Transactions" },
-  { key: "dapp", label: "DApps" },
-  { key: "tronGas", label: "Tron Gas" },
-  { key: "admin", label: "Admins" },
-  { key: "system", label: "System" },
-] as const;
+export const PAGE_MODULES = [{ key: "dashboard", label: "Dashboard" }] as const;
 
 export type PageModuleKey = (typeof PAGE_MODULES)[number]["key"];
 
 const API_TO_PAGE: Record<string, PageModuleKey> = {
   dashboard: "dashboard",
-  users: "userCenter",
-  wallets: "wallet",
-  transactions: "transaction",
-  dapps: "dapp",
-  trongas: "tronGas",
-  admins: "admin",
-  roles: "admin",
-  permissions: "admin",
-  system: "system",
-  alerts: "system",
 };
 
 export function toPageModule(apiModule: string): PageModuleKey | undefined {
@@ -38,11 +19,4 @@ export function apiModuleSortIndex(apiModule: string): number {
 
 export const PAGE_TO_API: Record<PageModuleKey, string[]> = {
   dashboard: ["dashboard"],
-  userCenter: ["users", "devices"],
-  wallet: ["wallets"],
-  transaction: ["transactions"],
-  dapp: ["dapps"],
-  tronGas: ["trongas"],
-  admin: ["admins", "roles", "permissions"],
-  system: ["system", "alerts"],
 };

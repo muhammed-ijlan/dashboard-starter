@@ -4,4 +4,3 @@ export * from "./TransactionChart";
 export * from "./AssetDistributionChart";
 export * from "./VolumeStatisticsChart";
 export * from "./RecentActivity";
-export * from "./SystemAlerts";

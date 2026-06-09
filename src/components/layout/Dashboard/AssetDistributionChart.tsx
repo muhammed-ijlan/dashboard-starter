@@ -1,5 +1,4 @@
 import { AppCardLayout } from "@/components/shared";
-import { CHAIN_COLORS } from "@/constants/const";
 import { useDashboard } from "@/hooks";
 import { PieChartSkeleton } from "./PieChartSkeleton";
 import React from "react";
@@ -45,7 +44,7 @@ const renderCustomizedLabel = ({
 };
 
 export const AssetDistributionChart: React.FC = () => {
-  const { t, i18n } = useTranslation(Namespace.Dashboard);
+  const { t } = useTranslation(Namespace.Dashboard);
   const { assetDistribution, isLoading } = useDashboard();
 
   const getColorFromString = (str: string) => {
@@ -61,18 +60,14 @@ export const AssetDistributionChart: React.FC = () => {
 
   const chartData = React.useMemo(() => {
     if (!assetDistribution) return [];
-    const isZh = i18n.language === "zh";
-
-    // Show the API values as-is: each chain's own percentage (already summing
-    // to 100), sorted desc for a readable pie. No normalization or grouping.
     return [...assetDistribution]
       .sort((a, b) => b.percentage - a.percentage)
       .map((item) => ({
-        name: isZh && item.chainLabelZh ? item.chainLabelZh : item.chainLabel,
+        name: item.chainLabel,
         value: item.percentage,
-        color: CHAIN_COLORS[item.chainLabel] || getColorFromString(item.chainLabel),
+        color: getColorFromString(item.chainLabel),
       }));
-  }, [assetDistribution, i18n.language]);
+  }, [assetDistribution]);
 
   if (isLoading || chartData.length === 0) {
     return (

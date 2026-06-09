@@ -1,103 +1,81 @@
-import { dashboardApi, queryKeys } from "@/api";
-import { useQuery } from "@tanstack/react-query";
-import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { POLLING_INTERVAL } from "@/constants/polling";
-import { LANGUAGES } from "@/constants/const";
-
+// Static placeholder data — replace with your own API calls.
 export const useDashboard = () => {
-  const { i18n } = useTranslation();
-  const lang = i18n.language === LANGUAGES.ZH ? LANGUAGES.ZH : LANGUAGES.EN;
+  const trend = [
+    { date: "Mon", transactions: 120 },
+    { date: "Tue", transactions: 185 },
+    { date: "Wed", transactions: 143 },
+    { date: "Thu", transactions: 210 },
+    { date: "Fri", transactions: 167 },
+    { date: "Sat", transactions: 98 },
+    { date: "Sun", transactions: 134 },
+  ];
 
-  const summaryQuery = useQuery({
-    queryKey: queryKeys.dashboard.summary(),
-    queryFn: dashboardApi.getSummary,
-    refetchInterval: POLLING_INTERVAL,
-  });
+  const assetDistribution = [
+    { chain: "A", chainLabel: "Asset A", percentage: 45 },
+    { chain: "B", chainLabel: "Asset B", percentage: 30 },
+    { chain: "C", chainLabel: "Asset C", percentage: 15 },
+    { chain: "D", chainLabel: "Others", percentage: 10 },
+  ];
 
-  const trendQuery = useQuery({
-    queryKey: queryKeys.dashboard.transactionTrend(),
-    queryFn: dashboardApi.getTransactionTrend,
-  });
+  const recentActivity = [
+    {
+      txHash: "0x1a2b3c4d",
+      type: "Transfer",
+      rawType: "transfer",
+      user: "user_001",
+      amount: 500,
+      tokenSymbol: "USD",
+      status: "completed",
+      createdAt: new Date(Date.now() - 1000 * 60 * 5).toISOString(),
+    },
+    {
+      txHash: "0x5e6f7a8b",
+      type: "Deposit",
+      rawType: "deposit",
+      user: "user_002",
+      amount: 1200,
+      tokenSymbol: "USD",
+      status: "completed",
+      createdAt: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
+    },
+    {
+      txHash: "0x9c0d1e2f",
+      type: "Withdraw",
+      rawType: "send",
+      user: "user_003",
+      amount: 250,
+      tokenSymbol: "USD",
+      status: "processing",
+      createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
+    },
+  ];
 
-  const assetDistributionQuery = useQuery({
-    queryKey: queryKeys.dashboard.assetDistribution(),
-    queryFn: dashboardApi.getAssetDistribution,
-  });
+  const summary = {
+    activeUsers: 1247,
+    activeUsersChangePct: 8.2,
+    totalInstalls: 5840,
+    totalInstallsChangePct: 12.5,
+    todayTransactions: 342,
+    todayTransactionsChangePct: -3.1,
+    totalVolume: 98500,
+    totalVolumeChangePct: 5.7,
+    volumeScope: "USD",
+    dataDate: new Date().toISOString(),
+  };
 
-  const recentActivityQuery = useQuery({
-    queryKey: queryKeys.dashboard.recentActivity(lang),
-    queryFn: () => dashboardApi.getRecentActivity(lang),
-    staleTime: 0,
-    gcTime: 0,
-    refetchOnMount: "always",
-  });
-
-  const systemAlertsQuery = useQuery({
-    queryKey: queryKeys.dashboard.systemAlerts(),
-    queryFn: dashboardApi.getSystemAlerts,
-    refetchInterval: POLLING_INTERVAL,
-  });
-
-  const transactionVolume7d = useQuery({
-    queryKey: queryKeys.dashboard.transactionVolume7d(),
-    queryFn: dashboardApi.getTransactionVolume,
-  });
-
-  const isLoading = useMemo(
-    () =>
-      summaryQuery.isLoading ||
-      trendQuery.isLoading ||
-      assetDistributionQuery.isLoading ||
-      recentActivityQuery.isLoading ||
-      systemAlertsQuery.isLoading ||
-      transactionVolume7d.isLoading,
-    [
-      summaryQuery.isLoading,
-      trendQuery.isLoading,
-      assetDistributionQuery.isLoading,
-      recentActivityQuery.isLoading,
-      systemAlertsQuery.isLoading,
-      transactionVolume7d.isLoading,
-    ],
-  );
-
-  const isError = useMemo(
-    () =>
-      summaryQuery.isError ||
-      trendQuery.isError ||
-      assetDistributionQuery.isError ||
-      recentActivityQuery.isError ||
-      systemAlertsQuery.isError ||
-      transactionVolume7d.isError,
-    [
-      summaryQuery.isError,
-      trendQuery.isError,
-      assetDistributionQuery.isError,
-      recentActivityQuery.isError,
-      systemAlertsQuery.isError,
-      transactionVolume7d.isError,
-    ],
-  );
+  const transactionVolume7d = trend.map((d) => ({
+    date: d.date,
+    volume: d.transactions * 280,
+  }));
 
   return {
-    summary: summaryQuery.data,
-    trend: trendQuery.data,
-    assetDistribution: assetDistributionQuery.data,
-    recentActivity: recentActivityQuery.data,
-    systemAlerts: systemAlertsQuery.data,
-    transactionVolume7d: transactionVolume7d.data,
-
-    isLoading,
-    isError,
-
-    refetchAll: () => {
-      summaryQuery.refetch();
-      trendQuery.refetch();
-      assetDistributionQuery.refetch();
-      recentActivityQuery.refetch();
-      systemAlertsQuery.refetch();
-      transactionVolume7d.refetch();
-    },
+    summary,
+    trend,
+    assetDistribution,
+    recentActivity,
+    transactionVolume7d,
+    isLoading: false,
+    isError: false,
+    refetchAll: () => {},
   };
 };

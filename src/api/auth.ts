@@ -1,12 +1,10 @@
-import { api } from "./client";
-import { endpoints } from "./endpoints";
-
-// ─── Types ────────────────────────────────────────────────────────────────────
+// TODO: replace stub implementations with your real API calls using the `api` client.
+// import { api } from "./client";
+// import { endpoints } from "./endpoints";
 
 export interface LoginPayload {
   account: string;
   password: string;
-  twoFactorCode?: string;
 }
 
 export interface LoginUser {
@@ -27,30 +25,26 @@ export interface ChangePasswordPayload {
   confirmPassword: string;
 }
 
-export interface ChangePasswordResult {
-  token: string;
-  expiresIn: number;
-  message: string;
-}
-
 export interface MeResult {
   id: number;
   account: string;
   role: string;
-  twoFactorEnabled: boolean;
-  /** Server timestamp of last enable/confirm. Null/absent when 2FA is disabled. */
-  twoFactorConfirmedAt?: string | null;
 }
 
-// ─── API ──────────────────────────────────────────────────────────────────────
-
 export const authApi = {
-  login: (payload: LoginPayload) => api.post<LoginResult>(endpoints.auth.login, payload),
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  login: (_: LoginPayload): Promise<LoginResult> => {
+    // TODO: return api.post<LoginResult>(endpoints.auth.login, payload);
+    return Promise.reject(new Error("Not implemented"));
+  },
 
-  logout: () => api.post<{ message: string }>(endpoints.auth.logout, {}),
+  logout: (): Promise<void> => {
+    // TODO: return api.post(endpoints.auth.logout, {});
+    return Promise.resolve();
+  },
 
-  changePassword: (payload: ChangePasswordPayload) =>
-    api.post<ChangePasswordResult>(endpoints.auth.changePassword, payload),
-
-  me: () => api.get<MeResult>(endpoints.auth.me),
+  me: (): Promise<MeResult> => {
+    // TODO: return api.get<MeResult>(endpoints.auth.me);
+    return Promise.reject(new Error("Not implemented"));
+  },
 };

@@ -3,12 +3,19 @@ import { Activity } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Namespace } from "@/i18n/namespaces";
 import { AppCardLayout, AppScrollArea, TruncatedId } from "@/components/shared";
-import type { RecentActivity as RecentActivityType } from "@/api/dashboard";
+interface RecentActivityType {
+  txHash: string;
+  type: string;
+  rawType: string;
+  user: string;
+  amount: number;
+  tokenSymbol?: string;
+  status: string;
+  createdAt: string;
+}
 import { useDashboard } from "@/hooks";
 import { formatTimeAgo } from "@/utils";
-import { Link } from "react-router-dom";
 import { RecentActivitySkeleton } from "./RecentActivitySkeleton";
-import { routes } from "@/routes/paths";
 
 export const RecentActivity: React.FC = () => {
   const { t, i18n } = useTranslation(Namespace.Dashboard);
@@ -18,14 +25,6 @@ export const RecentActivity: React.FC = () => {
     <AppCardLayout
       title={t("recentActivities")}
       icon={<Activity className="w-5 h-5" />}
-      action={
-        <Link
-          to={`/${routes?.TRANSACTIONS}`}
-          className="cursor-pointer text-body font-medium text-blue-600 hover:text-blue-700 transition-colors focus:outline-none"
-        >
-          {t("action.viewAll")}
-        </Link>
-      }
       className="h-100"
       contentClassName="min-h-0"
     >
@@ -55,10 +54,9 @@ export const RecentActivity: React.FC = () => {
                       : "text-[#E7000B]";
 
                 return (
-                  <Link
+                  <div
                     key={activity.txHash}
-                    to={`/${routes.TRANSACTIONS}?search=${encodeURIComponent(activity.txHash)}`}
-                    className="flex justify-between items-center gap-3 py-3.5 border-b border-surface-muted last:border-b-0 last:pb-0 first:pt-1 hover:bg-surface-muted/50 -mx-2 px-2  transition-colors"
+                    className="flex justify-between items-center gap-3 py-3.5 border-b border-surface-muted last:border-b-0 last:pb-0 first:pt-1 -mx-2 px-2"
                   >
                     <div className="flex flex-col gap-1.5 min-w-0 flex-1">
                       <div className="flex gap-2.5 items-center min-w-0">
@@ -90,7 +88,7 @@ export const RecentActivity: React.FC = () => {
 
                       <span className={`text-[12px] font-normal ${statusStyle}`}>{status}</span>
                     </div>
-                  </Link>
+                  </div>
                 );
               })}
             </div>

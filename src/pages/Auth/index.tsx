@@ -1,7 +1,6 @@
 import { Button, Form, Dropdown } from "antd";
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { authApi, ApiError } from "@/api";
 import { useAuthStore } from "@/store";
 import { AppFormItem, AppInput, AppInputPassword, notifyError } from "@/components/shared";
 import { zodValidator } from "@/components/shared/Form";
@@ -39,32 +38,16 @@ const Auth = () => {
   const onFinish = async (values: LoginForm) => {
     setLoading(true);
     try {
-      const { token, user } = await authApi.login({
+      // TODO: replace with your real API call, e.g. await authApi.login({ account, password })
+      await new Promise((r) => setTimeout(r, 600));
+      setAuth("mock-token", {
+        id: 1,
         account: values.account,
-        password: values.password,
+        email: `${values.account}@example.com`,
+        role: "Admin",
       });
-      setAuth(token, user);
       navigate(`/${routes.DASHBOARD}`, { replace: true });
     } catch (err) {
-      if (err instanceof ApiError) {
-        if (err.errorCode === "TWO_FACTOR_SETUP_REQUIRED") {
-          const data = (err.data ?? {}) as { setupToken?: string };
-          if (data.setupToken) {
-            navigate(`/${routes.SETUP_2FA}`, {
-              state: { setupToken: data.setupToken, account: values.account },
-              replace: true,
-            });
-            return;
-          }
-        }
-        if (err.errorCode === "TWO_FACTOR_CODE_REQUIRED") {
-          navigate(`/${routes.VERIFY_2FA}`, {
-            state: { account: values.account, password: values.password },
-            replace: true,
-          });
-          return;
-        }
-      }
       notifyError(err);
     } finally {
       setLoading(false);

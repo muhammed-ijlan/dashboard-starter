@@ -5,13 +5,6 @@
   },
   "sidebar": {
     "dashboard": "Dashboard",
-    "users": "Users",
-    "wallets": "Wallets",
-    "transactions": "Transactions",
-    "dapps": "Apps",
-    "tronGas": "Settings",
-    "admins": "Admins",
-    "system": "System",
     "accountSettings": "Account Settings",
     "logout": "Logout",
     "account": "Account"

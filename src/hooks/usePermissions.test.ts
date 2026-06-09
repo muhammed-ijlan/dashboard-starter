@@ -33,20 +33,13 @@ describe("usePermissions", () => {
     });
 
     it("returns true for granted permissions", () => {
-      mockPermissions = [
-        { module: "dashboard", view: true, edit: false, delete: false },
-        { module: "admin", view: true, edit: true, delete: true },
-      ];
+      mockPermissions = [{ module: "dashboard", view: true, edit: false, delete: false }];
 
       const { result } = renderHook(() => usePermissions());
 
       expect(result.current.canView("dashboard")).toBe(true);
       expect(result.current.canEdit("dashboard")).toBe(false);
       expect(result.current.canDelete("dashboard")).toBe(false);
-
-      expect(result.current.canView("admin")).toBe(true);
-      expect(result.current.canEdit("admin")).toBe(true);
-      expect(result.current.canDelete("admin")).toBe(true);
     });
 
     it("returns false for unknown modules", () => {
@@ -62,30 +55,23 @@ describe("usePermissions", () => {
     it("returns false when no keys exist", () => {
       const { result } = renderHook(() => usePermissions());
 
-      expect(result.current.hasPermission(PermissionKey.AdminsCreate)).toBe(false);
+      expect(result.current.hasPermission(PermissionKey.DashboardView)).toBe(false);
     });
 
     it("returns true for granted API keys", () => {
-      mockPermissionKeys = [
-        PermissionKey.DashboardView,
-        PermissionKey.AdminsCreate,
-        PermissionKey.AdminsUpdate,
-        PermissionKey.DappsCreate,
-      ];
-
-      const { result } = renderHook(() => usePermissions());
-
-      expect(result.current.hasPermission(PermissionKey.DashboardView)).toBe(true);
-      expect(result.current.hasPermission(PermissionKey.AdminsCreate)).toBe(true);
-      expect(result.current.hasPermission(PermissionKey.DappsCreate)).toBe(true);
-    });
-
-    it("returns false for non-granted API keys", () => {
       mockPermissionKeys = [PermissionKey.DashboardView];
 
       const { result } = renderHook(() => usePermissions());
 
-      expect(result.current.hasPermission(PermissionKey.AdminsDelete)).toBe(false);
+      expect(result.current.hasPermission(PermissionKey.DashboardView)).toBe(true);
+    });
+
+    it("returns false for non-granted API keys", () => {
+      mockPermissionKeys = [];
+
+      const { result } = renderHook(() => usePermissions());
+
+      expect(result.current.hasPermission(PermissionKey.DashboardView)).toBe(false);
       expect(result.current.hasPermission("")).toBe(false);
     });
   });
@@ -98,16 +84,12 @@ describe("usePermissions", () => {
     });
 
     it("returns the permissions from the query", () => {
-      mockPermissions = [
-        { module: "dashboard", view: true, edit: false, delete: false },
-        { module: "admin", view: true, edit: true, delete: true },
-      ];
+      mockPermissions = [{ module: "dashboard", view: true, edit: false, delete: false }];
 
       const { result } = renderHook(() => usePermissions());
 
-      expect(result.current.permissions).toHaveLength(2);
+      expect(result.current.permissions).toHaveLength(1);
       expect(result.current.permissions[0]?.module).toBe("dashboard");
-      expect(result.current.permissions[1]?.module).toBe("admin");
     });
   });
 });
