@@ -22,6 +22,7 @@ const RouterError = () => {
 
 const Login = lazyWithRetry(() => import("@/pages/Auth"));
 const Dashboard = lazyWithRetry(() => import("@/pages/Dashboard"));
+const Profile = lazyWithRetry(() => import("@/pages/Profile"));
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
                     <Dashboard />
                   </PermissionGuard>
                 ),
+              },
+              {
+                path: routes.PROFILE,
+                element: <Profile />,
               },
             ],
           },

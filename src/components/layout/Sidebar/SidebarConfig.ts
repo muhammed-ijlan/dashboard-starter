@@ -1,5 +1,5 @@
 import type { SidebarMenuItem } from "./Sidebar.types";
-import { LayoutDashboard } from "lucide-react";
+import { LayoutDashboard, UserCircle } from "lucide-react";
 
 export const sidebarMenu: SidebarMenuItem[] = [
   {
@@ -8,5 +8,12 @@ export const sidebarMenu: SidebarMenuItem[] = [
     path: "/dashboard",
     module: "dashboard",
     icon: LayoutDashboard,
+  },
+  {
+    key: "profile",
+    label: "sidebar.accountSettings",
+    path: "/profile",
+    module: "dashboard",
+    icon: UserCircle,
   },
 ];
